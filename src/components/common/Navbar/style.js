@@ -51,6 +51,12 @@ export const NavItem = styled.li`
     text-decoration: none;
     opacity: 0.7;
     color: var(--text);
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
   }
 
   &.active {
