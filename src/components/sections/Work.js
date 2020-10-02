@@ -77,7 +77,9 @@ const WorkedWith = () => (
   <Section id="work" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
     <Container>
       <div>
-        <h1>I've worked with</h1>
+        <Title>
+          <h1>I've worked with</h1>
+        </Title>
         <LogoGrid>
           {LOGOS.map(({ logo, link }) => (
             <ExternalLink key={link} href={link}>
@@ -94,6 +96,22 @@ const WorkedWith = () => (
     </Container>
   </Section>
 );
+
+const Title = styled.div`
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 40px;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2.4rem;
+    }
+  }
+`;
 
 const LogoGrid = styled.div`
   display: flex;
