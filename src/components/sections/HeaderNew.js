@@ -15,10 +15,9 @@ const Header = () => (
         </h1>
 
         <p>
-          I create bespoke websites that are fully customisable.
-          <br />
-          I code in a range of languages including HTML, CSS, SCSS, JavaScript
-          and PHP. <br />I enjoy working with WordPress, React and Gatsby.
+          I create bespoke websites that are fully customisable. I code in a
+          range of languages including HTML, CSS, SCSS, JavaScript and PHP. I
+          enjoy working with WordPress, React and Gatsby.
         </p>
       </Text>
     </Container>
@@ -27,7 +26,6 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: var(--bg);
-  // background-color: ${props => props.theme.color.black.luxury};
   font-family: ${props => props.theme.font.primary};
   padding: 300px 0;
 
@@ -37,16 +35,25 @@ const HeaderWrapper = styled.header`
 `;
 
 const Text = styled.div`
-  justify-self: center;
+  justify-self: start;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: start;
+  @media (min-width: ${props => props.theme.screen.md}) {
+    justify-self: center;
   }
 
   h1 {
     color: var(--text);
-    // color: ${props => props.theme.color.white.dark};
-    // color: ${props => props.theme.color.white.regular};
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2.4rem;
+    }
   }
 
   span {
@@ -55,7 +62,17 @@ const Text = styled.div`
 
   p {
     color: var(--text);
-    // color: ${props => props.theme.color.white.dark};
+    max-width: 550px;
+    font-size: 1rem;
+    line-height: 1.4;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.1rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 1.5rem;
+    }
   }
 `;
 
