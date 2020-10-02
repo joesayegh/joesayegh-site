@@ -37,7 +37,8 @@ const Footer = () => (
           {` `} and hosted on {` `}
           <ExternalLink href="https://www.netlify.com">
             Netlify
-          </ExternalLink>. {` `} The source code is hosted on {` `}
+          </ExternalLink>. <br />
+          {` `} The source code is hosted on {` `}
           <ExternalLink href="https://www.github.com">Github</ExternalLink>.
         </span>
       </Copyright>
@@ -60,23 +61,12 @@ const Footer = () => (
 const SocialIcons = styled.div`
   display: flex;
 
-  // img {
-  //   margin: 0 8px;
-  //   width: 24px;
-  //   height: 24px;
-  // }
-
   object {
     margin: 0 8px;
     width: 24px;
     height: 24px;
     pointer-events: none;
     transition: all 0.3s;
-
-    // &:hover,
-    // &:focus {
-    //   filter: invert(50%);
-    // }
 
     @media (prefers-color-scheme: dark) {
       filter: invert(100%);
@@ -92,34 +82,32 @@ const SocialIcons = styled.div`
 
 const FooterWrapper = styled.footer`
   background-color: var(--bg);
-  // background-color: ${props => props.theme.color.black.luxury};
   padding: 32px 0;
 `;
 
 const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  // ${props => props.theme.font_size.small};
   color: var(--text);
-  // color: ${props => props.theme.color.white.regular};
+  font-size: 0.6rem;
 
-  a {
-    text-decoration: none;
-    color: inherit;
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    font-size: 0.75rem;
   }
 
-  span {
-    font-size: 10px;
+  a {
+    color: inherit;
   }
 `;
 
 const StyledContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
 `;
 
