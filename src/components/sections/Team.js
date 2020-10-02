@@ -73,7 +73,9 @@ const Team = () => (
       >
         {/* <Section id="team" accent="secondary"> */}
         <Container style={{ position: 'relative' }}>
-          <h1>The Team</h1>
+          <Title>
+            <h1>The Team</h1>
+          </Title>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
@@ -83,8 +85,8 @@ const Team = () => (
               return (
                 <div key={name}>
                   <Img fluid={img.childImageSharp.fluid} alt={name} />
-                  <Title>{name}</Title>
-                  <Subtitle>{role}</Subtitle>
+                  <Name>{name}</Name>
+                  <JobTitle>{role}</JobTitle>
                 </div>
               );
             })}
@@ -101,9 +103,25 @@ const Team = () => (
   />
 );
 
+const Title = styled.div`
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 40px;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2.4rem;
+    }
+  }
+`;
+
 const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-rows: min-content;
   grid-gap: 24px;
   justify-content: start;
@@ -111,6 +129,7 @@ const TeamGrid = styled.div`
   margin-top: 72px;
 
   @media (min-width: ${props => props.theme.screen.xs}) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-gap: 50px;
   }
 
@@ -152,16 +171,13 @@ const ArtMobile = styled.figure`
   }
 `;
 
-const Title = styled.p`
+const Name = styled.p`
   margin-top: 16px;
   color: var(--text);
-  // color: ${props => props.theme.color.black.regular};
 `;
 
-const Subtitle = styled.p`
-  ${props => props.theme.font_size.small};
+const JobTitle = styled.p`
   color: var(--text);
-  // color: ${props => props.theme.color.black.light};
 `;
 
 export default Team;
