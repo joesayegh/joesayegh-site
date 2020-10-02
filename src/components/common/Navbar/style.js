@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { Container } from '@components/global';
 
 export const Nav = styled.nav`
-  padding: 16px 0;
+  padding: 6px 0;
   background-color: var(--bg);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    padding: 16px 0;
+  }
 `;
 
 export const StyledContainer = styled(Container)`
@@ -83,12 +87,21 @@ export const Brand = styled.div`
 
   svg {
     width: 100%;
-    max-width: 30px;
+    max-width: 24px;
 
-    // @media (min-width: ${props => props.theme.screen.md}) {
-    //   max-width: 40px;
+    // @media (min-width: ${props => props.theme.screen.sm}) {
+    //   max-width: 30px;
     // }
   }
+`;
+
+export const Wordmark = styled.span`
+  font-size: 1.4rem;
+  padding: 0 10px;
+
+  // @media (min-width: ${props => props.theme.screen.sm}) {
+  //   padding: 10px;
+  // }
 `;
 
 export const Mobile = styled.div`

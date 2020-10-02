@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Scrollspy from 'react-scrollspy';
 
-import styled from 'styled-components';
-
 import { Container } from '@components/global';
 import {
   Nav,
   NavItem,
   Brand,
+  Wordmark,
   StyledContainer,
   NavListWrapper,
   MobileMenu,
@@ -93,9 +92,5 @@ class Navbar extends Component {
     );
   }
 }
-
-const Wordmark = styled.span`
-  padding: 10px;
-`;
 
 export default Navbar;
