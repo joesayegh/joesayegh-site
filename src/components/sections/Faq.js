@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Section, Container } from '@components/global';
 
@@ -67,7 +68,9 @@ const FAQS = [
 const Faq = () => (
   <Section id="faq" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
     <Container>
-      <h1 style={{ marginBottom: 40 }}>Frequently Asked Questions</h1>
+      <Title>
+        <h1>Frequently Asked Questions</h1>
+      </Title>
       <div>
         {FAQS.map(({ title, content }) => (
           <FaqItem title={title} key={title}>
@@ -78,5 +81,21 @@ const Faq = () => (
     </Container>
   </Section>
 );
+
+const Title = styled.div`
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 40px;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2.4rem;
+    }
+  }
+`;
 
 export default Faq;
