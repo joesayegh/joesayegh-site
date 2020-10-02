@@ -49,7 +49,6 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: ${props => props.theme.font.primary};
-    // font-family: ${props => props.theme.font.secondary};
   }
 
   h1, h2, h3, p {
