@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
 
   html {
 
+    // CSS VARIABLES
+
     // FONTS
     --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
 
@@ -49,6 +51,27 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: ${props => props.theme.font.primary};
+  }
+
+  // Mobile Safari - Fixes the blinking effect when a link has been hit
+  body * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  *,
+  *:before,
+  *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
+  }
+
+  ::selection {
+    background: var(--text);
+    color: var(--bg);
   }
 
   h1, h2, h3, p {
