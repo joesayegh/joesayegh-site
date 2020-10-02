@@ -28,6 +28,7 @@ const theme = {
     primary: '#8bd8ed',
   },
   screen: {
+    iphone: '375px',
     xs: '575px',
     sm: '767px',
     md: '991px',
