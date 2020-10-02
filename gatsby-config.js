@@ -40,6 +40,8 @@ module.exports = {
         theme_color: `#fffff0`,
         display: `minimal-ui`,
         icon: `static/favicon.svg`,
+        // This adds apple-touch-icon links to <head>
+        legacy: true,
       },
     },
     // {
