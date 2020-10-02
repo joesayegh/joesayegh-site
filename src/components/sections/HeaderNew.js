@@ -44,7 +44,7 @@ const Text = styled.div`
   h1 {
     color: var(--text);
     font-size: 1.4rem;
-    line-height: 1.4;
+    line-height: 1.3;
     font-weight: 700;
 
     @media (min-width: ${props => props.theme.screen.iphone}) {
@@ -72,6 +72,10 @@ const Text = styled.div`
 
     @media (min-width: ${props => props.theme.screen.md}) {
       font-size: 1.5rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      max-width: 750px;
     }
   }
 `;
