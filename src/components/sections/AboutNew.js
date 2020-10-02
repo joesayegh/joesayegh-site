@@ -114,7 +114,30 @@ const Grid = styled.div`
   `}
 
   h2 {
+    font-size: 1.3rem;
+    line-height: 1.3;
     margin-bottom: 16px;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 1.3rem;
+    }
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
