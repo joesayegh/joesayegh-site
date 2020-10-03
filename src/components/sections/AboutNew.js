@@ -77,7 +77,7 @@ const About = () => (
               <p>
                 I have been working as a website designer, developer and founder
                 of my business Square Solve. I feel incredibly lucky to be able
-                to do what I love for a living especailly when you consider that
+                to do what I love for a living especially when you consider that
                 neither my job or the internet existed when I was born.
               </p>
             </div>
