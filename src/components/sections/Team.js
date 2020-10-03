@@ -134,11 +134,12 @@ const TeamGrid = styled.div`
   }
 
   @media (min-width: ${props => props.theme.screen.md}) {
-    width: 60%;
+    width: 75%;
     grid-template-columns: repeat(auto-fill, 200px);
   }
 
   @media (min-width: ${props => props.theme.screen.lg}) {
+    width: 65%;
     justify-content: space-between;
   }
 `;
