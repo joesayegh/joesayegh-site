@@ -89,8 +89,12 @@ const Copyright = styled.div`
   color: var(--text);
   font-size: 0.6rem;
 
+  @media (min-width: ${props => props.theme.screen.iphone}) {
+    font-size: 0.7rem;
+  }
+
   @media (min-width: ${props => props.theme.screen.sm}) {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 
   a {
