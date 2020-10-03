@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container } from '@components/global';
 
 export const Nav = styled.nav`
-  padding: 6px 0;
+  padding: 10px 0;
   background-color: var(--bg);
   position: fixed;
   width: 100%;
@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   z-index: 1000;
 
   @media (min-width: ${props => props.theme.screen.sm}) {
-    padding: 16px 0;
+    padding: 20px 0;
   }
 `;
 
