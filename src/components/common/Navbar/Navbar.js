@@ -74,6 +74,7 @@ class Navbar extends Component {
             <button
               onClick={this.toggleMobileMenu}
               style={{ color: 'var(--text)' }}
+              aria-labelledby="menubutton"
             >
               <MenuIcon />
             </button>
