@@ -48,14 +48,12 @@ export const Wrapper = styled.div`
       // PLUS
       content: '+';
       font-size: 32px;
-      font-family: Arial, sans-serif;
-      font-weight: 300;
+      font-weight: 200;
       display: block;
       position: absolute;
       top: 16px;
       right: 16px;
-      transform: rotate(0deg);
-      transform-origin: center;
+      transform-origin: center 57.5%;
       transition: transform 0.3s ease-in-out;
     }
 
