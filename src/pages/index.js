@@ -9,7 +9,7 @@ import HeaderNew from '@sections/HeaderNew';
 import AboutNew from '@sections/AboutNew';
 // import Brands from '@sections/Brands';
 import Work from '@sections/Work';
-import Team from '@sections/Team';
+// import Team from '@sections/Team';
 import Faq from '@sections/Faq';
 import FooterNew from '@sections/FooterNew';
 
@@ -22,7 +22,7 @@ const IndexPage = () => (
     <AboutNew />
     {/* <Brands /> */}
     <Work />
-    <Team />
+    {/* <Team /> */}
     <Faq />
     {/* <Footer /> */}
     <FooterNew />
