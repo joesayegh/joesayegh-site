@@ -32,9 +32,9 @@ const GlobalStyles = createGlobalStyle`
     --border: rgba( 0, 0, 0, .125 );
     --bg-light: rgba( 0, 0, 0, .05 );
     // PURE WHITE
-    // --bg: rgba( 255, 255, 255, 1 );
+    --bg: rgba( 255, 255, 255, 1 );
     // IVORY
-    --bg: rgba( 255, 255, 240, 1 );
+    // --bg: rgba( 255, 255, 240, 1 );
 
     // DARK MODE COLORS
     @media ( prefers-color-scheme: dark ) {
