@@ -36,8 +36,8 @@ module.exports = {
         name: `Joe Sayegh`,
         short_name: `joesayegh`,
         start_url: `/`,
-        background_color: `#fffff0`,
-        theme_color: `#fffff0`,
+        background_color: `#000000`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `static/favicon.svg`,
         // This adds apple-touch-icon links to <head>
