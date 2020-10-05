@@ -2,8 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: 'Freelance website developer from London',
-  title: 'Joe Sayegh',
+  description: 'Joe Sayegh is a freelance website developer from London',
+  title: 'Joe Sayegh - Freelance website developer',
   url: '',
   author: 'Joe Sayegh',
   keywords: ['gatsby', 'site', 'joesayegh'],
