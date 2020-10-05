@@ -17,7 +17,8 @@ import {
 import { ReactComponent as SiteLogo } from '@static/logo.svg';
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Work', 'Team', 'FAQ'];
+// const NAV_ITEMS = ['About', 'Work', 'Team', 'FAQ'];
+const NAV_ITEMS = ['About', 'Work', 'FAQ'];
 
 class Navbar extends Component {
   state = {
