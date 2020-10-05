@@ -5,7 +5,7 @@ import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
 import About from '@sections/About';
-import FooterNew from '@sections/FooterNew';
+import Footer from '@sections/Footer';
 
 import { Container } from '@components/global';
 
@@ -17,7 +17,7 @@ const NotFoundPage = () => (
       <h1>NOT FOUND</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Container>
-    <FooterNew />
+    <Footer />
   </Layout>
 );
 

@@ -5,13 +5,13 @@ import Layout from '@common/Layout';
 import Navbar from '@common/Navbar';
 
 import About from '@sections/About';
-import FooterNew from '@sections/FooterNew';
+import Footer from '@sections/Footer';
 
 const SecondPage = () => (
   <Layout>
     <Navbar />
     <About />
-    <FooterNew />
+    <Footer />
   </Layout>
 );
 

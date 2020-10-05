@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
@@ -26,79 +24,42 @@ const SOCIAL = [
 ];
 
 const Footer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_pot: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
-        <FooterWrapper>
-          <StyledContainer>
-            <Copyright>
-              © 2013-{new Date().getFullYear()} / Copyright Joe Sayegh. All
-              Rights reserved.
-              <br />
-              <br />
-              <span>
-                This site is built with {` `}
-                <ExternalLink href="https://www.gatsbyjs.org">
-                  Gatsby
-                </ExternalLink>
-                {` `} and hosted on {` `}
-                <ExternalLink href="https://www.netlify.com">
-                  Netlify
-                </ExternalLink>
-                . {` `} The source code is hosted on {` `}
-                <ExternalLink href="https://www.github.com">
-                  Github
-                </ExternalLink>
-                .
-              </span>
-            </Copyright>
-            <SocialIcons>
-              {SOCIAL.map(({ icon, link }) => (
-                <ExternalLink key={link} href={link}>
-                  <object
-                    type="image/svg+xml"
-                    data={icon}
-                    alt="link"
-                    aria-label="link"
-                  />
-                </ExternalLink>
-              ))}
-            </SocialIcons>
-          </StyledContainer>
-        </FooterWrapper>
-      </React.Fragment>
-    )}
-  />
+  <FooterWrapper>
+    <StyledContainer>
+      <Copyright>
+        © 2013-{new Date().getFullYear()} / Copyright Joe Sayegh. All Rights
+        reserved.
+        <br />
+        <br />
+        <span>
+          This site is built with {` `}
+          <ExternalLink href="https://www.gatsbyjs.org">Gatsby</ExternalLink>
+          {` `} and hosted on {` `}
+          <ExternalLink href="https://www.netlify.com">
+            Netlify
+          </ExternalLink>. <br />
+          {` `} The source code is hosted on {` `}
+          <ExternalLink href="https://www.github.com">Github</ExternalLink>.
+        </span>
+      </Copyright>
+      <SocialIcons>
+        {SOCIAL.map(({ icon, link }) => (
+          <ExternalLink key={link} href={link}>
+            <object
+              type="image/svg+xml"
+              data={icon}
+              alt="link"
+              aria-label="link"
+            />
+          </ExternalLink>
+        ))}
+      </SocialIcons>
+    </StyledContainer>
+  </FooterWrapper>
 );
 
 const SocialIcons = styled.div`
   display: flex;
-
-  // img {
-  //   margin: 0 8px;
-  //   width: 24px;
-  //   height: 24px;
-  // }
 
   object {
     margin: 0 8px;
@@ -106,11 +67,6 @@ const SocialIcons = styled.div`
     height: 24px;
     pointer-events: none;
     transition: all 0.3s;
-
-    // &:hover,
-    // &:focus {
-    //   filter: invert(50%);
-    // }
 
     @media (prefers-color-scheme: dark) {
       filter: invert(100%);
@@ -126,41 +82,36 @@ const SocialIcons = styled.div`
 
 const FooterWrapper = styled.footer`
   background-color: var(--bg);
-  // background-color: ${props => props.theme.color.black.luxury};
   padding: 32px 0;
 `;
 
 const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  // ${props => props.theme.font_size.small};
   color: var(--text);
-  // color: ${props => props.theme.color.white.regular};
+  font-size: 0.6rem;
+
+  @media (min-width: ${props => props.theme.screen.iphone}) {
+    font-size: 0.7rem;
+  }
+
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    font-size: 0.8rem;
+  }
 
   a {
-    text-decoration: none;
     color: inherit;
   }
-
-  span {
-    font-size: 10px;
-  }
-`;
-
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
 `;
 
 const StyledContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
   }
 `;
 

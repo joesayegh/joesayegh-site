@@ -44,16 +44,24 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
+      <Section
+        id="about"
+        style={{ background: 'var(--bg)', color: 'var(--text)' }}
+      >
         <Container>
+          <Title>
+            <h1>About Me</h1>
+          </Title>
+
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              {/* <h2>Speed past the competition</h2> */}
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
+                Born and raised in England, I've lived in North London for most
+                of my life. I was interested in technology from a young age. I
+                built my first website when I was 14. This was when Netscape
+                Navigator and Internet Explorer were duking it out for web
+                supremacy.
               </p>
             </div>
             <Art>
@@ -65,23 +73,27 @@ const About = () => (
               <Img fluid={data.art_learn.childImageSharp.fluid} />
             </Art>
             <div>
-              <h2>Nothing new to learn here</h2>
+              {/* <h2>Nothing new to learn here</h2> */}
               <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
+                I have been working as a website designer, developer and founder
+                of my business Square Solve. I feel incredibly lucky to be able
+                to do what I love for a living especially when you consider that
+                neither my job or the internet existed when I was born.
               </p>
             </div>
           </Grid>
           <Grid>
             <div>
-              <h2>Grow and build your ideas</h2>
+              {/* <h2>Grow and build your ideas</h2> */}
               <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
+                My clients range from small local businesses all the way to
+                global corporations operating all over the world. They've
+                allowed me to produce work that we're both very proud of. I
+                enjoy using CMS technologies such as Wordpress as well as
+                cutting-edge tools such as React JS and Gatsby for statically
+                generating sites and creating high-performing web applications.
+                I have learnt how to use Git, GitHub and Bitbucket as part of my
+                source control training and know how to work in a team.
               </p>
             </div>
             <Art>
@@ -93,6 +105,22 @@ const About = () => (
     )}
   />
 );
+
+const Title = styled.div`
+  h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 40px;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 2.4rem;
+    }
+  }
+`;
 
 const Grid = styled.div`
   display: grid;
@@ -110,8 +138,31 @@ const Grid = styled.div`
     grid-template-columns: 2fr 3fr;
   `}
 
-  h2 {
-    margin-bottom: 16px;
+  // h2 {
+  //   font-size: 1.3rem;
+  //   line-height: 1.3;
+  //   margin-bottom: 16px;
+
+  //   @media (min-width: ${props => props.theme.screen.iphone}) {
+  //     font-size: 1.5rem;
+  //   }
+
+  //   @media (min-width: ${props => props.theme.screen.md}) {
+  //     font-size: 2rem;
+  //   }
+  // }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    @media (min-width: ${props => props.theme.screen.iphone}) {
+      font-size: 1rem;
+    }
+
+    @media (min-width: ${props => props.theme.screen.md}) {
+      font-size: 1.3rem;
+    }
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
