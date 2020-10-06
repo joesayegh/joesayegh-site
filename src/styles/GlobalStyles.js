@@ -130,6 +130,11 @@ const GlobalStyles = createGlobalStyle`
   a {
     cursor: pointer;
   }
+
+  // COMMENT OUT TO DEBUG
+  // * {
+  // 	outline: 1px dotted orange;
+  // }
 `;
 
 export default GlobalStyles;
