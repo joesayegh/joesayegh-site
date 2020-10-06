@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 import { Section, Container } from '@components/global';
 
+function handleClick(e) {
+  e.preventDefault();
+  alert('Heyyyy!');
+  // console.log('The link was clicked.');
+}
+
 const Test = () => (
   <Section style={{ background: 'var(--bg)', color: 'var(--text)' }}>
     <Container>
@@ -17,6 +23,8 @@ const Test = () => (
             esse ducimus autem quidem! Libero quae, voluptatem quod voluptatibus
             modi alias deserunt excepturi!
           </p>
+          <br />
+          <ButtonTest onClick={handleClick}>Click me</ButtonTest>
         </div>
       </Text>
     </Container>
@@ -52,6 +60,11 @@ const Text = styled.div`
       font-size: 1.3rem;
     }
   }
+`;
+
+const ButtonTest = styled.button`
+  background-color: var(--text);
+  color: var(--bg);
 `;
 
 export default Test;
