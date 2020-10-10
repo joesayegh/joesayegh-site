@@ -9,6 +9,39 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
+        selfie_one: file(
+          sourceInstanceName: { eq: "me" }
+          name: { eq: "IMG_5284" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        keyboard: file(
+          sourceInstanceName: { eq: "me" }
+          name: { eq: "giorgio-trovato-v_bri4iVuiM-unsplash-cropped" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
+        map: file(
+          sourceInstanceName: { eq: "me" }
+          name: { eq: "benigno-hoyuela-Ou5bbnSZjGI-unsplash-cropped" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 760) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+
         art_fast: file(
           sourceInstanceName: { eq: "art" }
           name: { eq: "fast" }
@@ -55,7 +88,6 @@ const About = () => (
 
           <Grid>
             <div>
-              {/* <h2>Speed past the competition</h2> */}
               <p>
                 Born and raised in England, I've lived in North London for most
                 of my life. I was interested in technology from a young age. I
@@ -65,15 +97,20 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
+              <Img
+                fluid={data.selfie_one.childImageSharp.fluid}
+                style={{ borderRadius: '50%', filter: 'grayscale(100%)' }}
+              />
             </Art>
           </Grid>
           <Grid inverse>
             <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
+              <Img
+                fluid={data.keyboard.childImageSharp.fluid}
+                style={{ borderRadius: '50%', filter: 'grayscale(100%)' }}
+              />
             </Art>
             <div>
-              {/* <h2>Nothing new to learn here</h2> */}
               <p>
                 I have been working as a website designer, developer and founder
                 of my business Square Solve. I feel incredibly lucky to be able
@@ -84,7 +121,6 @@ const About = () => (
           </Grid>
           <Grid>
             <div>
-              {/* <h2>Grow and build your ideas</h2> */}
               <p>
                 My clients range from small local businesses all the way to
                 global corporations operating all over the world. They've
@@ -97,7 +133,10 @@ const About = () => (
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img
+                fluid={data.map.childImageSharp.fluid}
+                style={{ borderRadius: '50%', filter: 'grayscale(100%)' }}
+              />
             </Art>
           </Grid>
         </Container>
