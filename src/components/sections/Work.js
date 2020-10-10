@@ -13,7 +13,7 @@ import CokeLogo from '@images/logos/coca-cola.svg';
 import DHLLogo from '@images/logos/dhl.svg';
 import GreeneKingLogo from '@images/logos/greene-king.svg';
 import IkeaLogo from '@images/logos/ikea.svg';
-import LowellLogo from '@images/logos/lowell.svg';
+// import LowellLogo from '@images/logos/lowell.svg';
 import MarksAndSpencerLogo from '@images/logos/marks-and-spencer.svg';
 import PrimarkLogo from '@images/logos/primark.svg';
 import TataLogo from '@images/logos/tata.svg';
