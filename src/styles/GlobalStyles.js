@@ -84,41 +84,37 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${props => props.theme.font.primary};
   }
 
-  h1 {
-    ${props => props.theme.font_size.larger};
-  }
-
-  h2 {
-    ${props => props.theme.font_size.large};
-  }
-
-  h3 {
-    ${props => props.theme.font_size.regular};
-  }
-
-  p {
-    ${props => props.theme.font_size.small};
-    // color: var(--text);
-    // color: ${props => props.theme.color.black.light};
-    color: ${props => props.theme.color.text};
-  }
+  h1 { ${props => props.theme.font_size.larger}; }
+  h2 { ${props => props.theme.font_size.large}; }
+  h3 { ${props => props.theme.font_size.regular}; }
+  p { ${props => props.theme.font_size.small}; }
 
   @media (min-width: ${props => props.theme.screen.sm}) {
-    h1 {
-      ${props => props.theme.font_size.xlarge};
-    }
+    h1 { ${props => props.theme.font_size.xlarge}; }
+    h2 { ${props => props.theme.font_size.larger}; }
+    h3 { ${props => props.theme.font_size.large}; }
+    p { ${props => props.theme.font_size.regular}; }
+  }
 
-    h2 {
-      ${props => props.theme.font_size.larger};
-    }
+  pre {
+    background: #eee;
+    color: rgba( 0, 0, 0, 1 );
+    border: 1px solid #ddd;
+    border-left: 3px solid var(--accent);
+    page-break-inside: avoid;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+    padding: 1.6em;
+    max-width: 100%;
+    display: block;
+  }
 
-    h3 {
-      ${props => props.theme.font_size.large};
-    }
-
-    p {
-      ${props => props.theme.font_size.regular};
-    }
+  code {
+    line-height: 1.6;
+    margin-bottom: 1.6em;
   }
 
   button {
