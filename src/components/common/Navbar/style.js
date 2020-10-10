@@ -78,8 +78,6 @@ export const MobileMenu = styled.div`
 export const Brand = styled.div`
   // COMMENT THIS OUT IF NOT USING TEXT WITH LOGO
   color: var(--text);
-  font-family: ${props => props.theme.font.primary};
-  ${props => props.theme.font_size.large};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,26 +86,18 @@ export const Brand = styled.div`
   svg {
     width: 100%;
     max-width: 24px;
-
-    // @media (min-width: ${props => props.theme.screen.sm}) {
-    //   max-width: 30px;
-    // }
   }
 `;
 
 export const Wordmark = styled.span`
   font-size: 1.4rem;
   padding: 0 10px;
-
-  // @media (min-width: ${props => props.theme.screen.sm}) {
-  //   padding: 10px;
-  // }
 `;
 
 export const Mobile = styled.div`
   display: block;
 
-  @media (min-width: ${props => props.theme.screen.md}) {
+  @media (min-width: ${props => props.theme.screen.sm}) {
     display: none;
   }
 
@@ -116,7 +106,7 @@ export const Mobile = styled.div`
     `
     display: none;
 
-    @media (min-width: ${props.theme.screen.md}) {
+    @media (min-width: ${props.theme.screen.sm}) {
       display: block;
     }
   `}
