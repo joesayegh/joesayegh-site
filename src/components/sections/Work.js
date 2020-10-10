@@ -12,6 +12,7 @@ import CapitalOneLogo from '@images/logos/capital-one.svg';
 import CokeLogo from '@images/logos/coca-cola.svg';
 import DHLLogo from '@images/logos/dhl.svg';
 import GreeneKingLogo from '@images/logos/greene-king.svg';
+import IkeaLogo from '@images/logos/ikea.svg';
 import LowellLogo from '@images/logos/lowell.svg';
 import MarksAndSpencerLogo from '@images/logos/marks-and-spencer.svg';
 import PrimarkLogo from '@images/logos/primark.svg';
@@ -52,9 +53,13 @@ const LOGOS = [
     link: 'https://greeneking.com',
   },
   {
-    logo: LowellLogo,
-    link: 'https://lowell.com',
+    logo: IkeaLogo,
+    link: 'https://ikea.com',
   },
+  // {
+  //   logo: LowellLogo,
+  //   link: 'https://lowell.com',
+  // },
   {
     logo: MarksAndSpencerLogo,
     link: 'https://mands.com',
