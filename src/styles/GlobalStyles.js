@@ -21,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
 
     // LINE HEIGHTS
     --lh-body: 1.44em;
-    --lh-title: 1.2em;
+    --lh-title: 1.3rem;
 
     // COLORS
     --accent: #e74832;
@@ -50,7 +50,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: ${props => props.theme.font.primary};
+    font-family: var(--sans);
+    // font-family: ${props => props.theme.font.primary};
   }
 
   // Mobile Safari - Fixes the blinking effect when a link has been hit
@@ -97,8 +98,9 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     ${props => props.theme.font_size.small};
-    color: var(--text);
+    // color: var(--text);
     // color: ${props => props.theme.color.black.light};
+    color: ${props => props.theme.color.text};
   }
 
   @media (min-width: ${props => props.theme.screen.sm}) {
