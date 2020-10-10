@@ -58,31 +58,22 @@ const Footer = () => (
   </FooterWrapper>
 );
 
-const SocialIcons = styled.div`
-  display: flex;
-
-  object {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    transition: all 0.3s;
-
-    @media (prefers-color-scheme: dark) {
-      filter: invert(100%);
-    }
-  }
-
-  margin-top: 40px;
-
-  @media (min-width: ${props => props.theme.screen.sm}) {
-    margin-top: 0;
-  }
-`;
-
 const FooterWrapper = styled.footer`
   background-color: var(--bg);
   padding: 32px 0;
+`;
+
+const StyledContainer = styled(Container)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
 `;
 
 const Copyright = styled.div`
@@ -102,16 +93,24 @@ const Copyright = styled.div`
   }
 `;
 
-const StyledContainer = styled(Container)`
+const SocialIcons = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin-top: 40px;
+
+  object {
+    margin: 0 8px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+    transition: all 0.3s;
+
+    @media (prefers-color-scheme: dark) {
+      filter: invert(100%);
+    }
+  }
 
   @media (min-width: ${props => props.theme.screen.sm}) {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+    margin-top: 0;
   }
 `;
 
