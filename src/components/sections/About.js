@@ -163,33 +163,20 @@ const Title = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
+  text-align: left;
   grid-gap: 40px;
-  text-align: right;
   align-items: center;
   justify-items: center;
-  margin: 24px 0;
+  margin-bottom: 96px;
 
   ${props =>
     props.inverse &&
     `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
+      ${Art} {
+        order: 1;
+      }
   `}
-
-  // h2 {
-  //   font-size: 1.3rem;
-  //   line-height: 1.3;
-  //   margin-bottom: 16px;
-
-  //   @media (min-width: ${props => props.theme.screen.iphone}) {
-  //     font-size: 1.5rem;
-  //   }
-
-  //   @media (min-width: ${props => props.theme.screen.md}) {
-  //     font-size: 2rem;
-  //   }
-  // }
 
   p {
     font-size: 0.9rem;
@@ -204,22 +191,26 @@ const Grid = styled.div`
     }
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
-
-    &:last-child {
-      margin-bottom: 24px;
-    }
+  @media (min-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 3fr 2fr;
+    text-align: right;
+    margin: 24px 0;
 
     ${props =>
       props.inverse &&
       `
-        ${Art} {
-          order: 2;
-        }
+      text-align: left;
+      grid-template-columns: 2fr 3fr;
+
+      div {
+        order: 2;
+      }
+
     `}
+
+    &:last-child {
+      margin-bottom: 24px;
+    }
   }
 `;
 
