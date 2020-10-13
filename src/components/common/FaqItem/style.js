@@ -30,6 +30,10 @@ export const Wrapper = styled.div`
       line-height: 1;
     }
 
+    &:hover {
+      color: var(--accent);
+    }
+
     // THIS IS THE ICON (ARROW OR PLUS)
     &::after {
       // ARROW
@@ -63,7 +67,7 @@ export const Wrapper = styled.div`
         // transform: rotate(135deg);
 
         // PLUS
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
       }
     }
   }
