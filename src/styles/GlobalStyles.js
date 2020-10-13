@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --lh-title: 1.3rem;
 
     // COLORS
-    --accent: #e74832;
+    --accent: #0070c9;
     --text: rgba( 0, 0, 0, 1 );
     --text-light: rgba( 0, 0, 0, .6 );
     --text-lightest: rgba( 0, 0, 0, .3 );
@@ -38,6 +38,7 @@ const GlobalStyles = createGlobalStyle`
 
     // DARK MODE COLORS
     @media ( prefers-color-scheme: dark ) {
+      --accent: #e74832;
       --text: rgba( 255, 255, 255, 1 );
       --text-light: rgba( 255, 255, 255, .5 );
       --text-lightest: rgba( 255, 255, 255, .25 );
