@@ -3,16 +3,12 @@ import styled from 'styled-components';
 import { Container } from '@components/global';
 
 export const Nav = styled.nav`
-  padding: 10px 0;
+  padding: 20px 0;
   background-color: var(--bg);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-
-  @media (min-width: ${props => props.theme.screen.sm}) {
-    padding: 20px 0;
-  }
 `;
 
 export const StyledContainer = styled(Container)`
@@ -37,7 +33,8 @@ export const NavListWrapper = styled.div`
       mobile &&
       `
         flex-direction: column;
-        margin-top: 1em;
+        margin-top: 2em;
+        margin-bottom: 2em;
 
         > ${NavItem} {
           margin: 0;
