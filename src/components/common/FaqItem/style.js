@@ -30,9 +30,9 @@ export const Wrapper = styled.div`
       line-height: 1;
     }
 
-    &:hover {
-      color: var(--accent);
-    }
+    // &:hover {
+    //   color: var(--accent);
+    // }
 
     // THIS IS THE ICON (ARROW OR PLUS)
     &::after {
